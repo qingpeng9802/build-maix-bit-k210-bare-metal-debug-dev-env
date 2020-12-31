@@ -295,7 +295,7 @@ https://maixpy.sipeed.com/en/get_started/serial_tools.html?h=115200
 https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom
 
 ## About
-This tutorial is written when I only have the experience of using development board but have no knowledge of embedded development. In fact, it is mainly for building an on-chip verification environment for [my compiler project]() about RISC-V assembly.  
+This tutorial is written when I only have the experience of using development board but have no knowledge of embedded development. In fact, it is mainly for building an on-chip verification environment for [my compiler project](https://github.com/qingpeng9802/minijava-to-k210-riscv-compiler) about RISC-V assembly.  
   
 Now (2020.12), there are not many resources of RISC-V development board, which means we need some exploration during development, especially for non-MaixPy development environment of Maix Bit. I hope this tutorial can help more people enjoy the fun of RISC-V bare metal development :)
 
