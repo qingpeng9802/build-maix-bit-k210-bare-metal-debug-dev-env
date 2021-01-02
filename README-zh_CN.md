@@ -236,7 +236,7 @@ UART 参数:
 如果你正在跟随教程的 `OpenOCD 调试` 且只连接了调试器到虚拟机，跳到 Step 1。
 > 如果你正在使用Maix Bit的ft2232c芯片（在你的宿主机上）来做USB-UART：  
 注意Maix BiT的CH552T芯片只使用了一个K210的串口来实现USB-串口。  
-因此，两个串口非出现在设备管理中，但只有一个可以用做UART，所以你需要两个都试试！  
+因此，两个串口都会出现在设备管理中，但只有一个可以用做UART，所以你需要两个都试试！  
   
 1. `sudo apt-get install minicom`
 2. `ls /dev/ttyUSB* -la`  
@@ -296,7 +296,7 @@ https://maixpy.sipeed.com/en/get_started/serial_tools.html?h=115200
 https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom
 
 ## 关于
-这个教程是我在仅有开发板使用经验但没有嵌入式开发知识的情况下写成的，实际上，主要是为了我的一个关于RISC-V汇编的[编译器项目]()的片上验证来搭建环境。  
+这个教程是我在仅有开发板使用经验但没有嵌入式开发知识的情况下写成的，实际上，主要是为了我的一个关于RISC-V汇编的[编译器项目](https://github.com/qingpeng9802/minijava-to-k210-riscv-compiler)的片上验证来搭建环境。  
   
 目前 (2020.12) RISC-V开发板的资源相对缺乏，开发中需要一定的探索，特别是对于Maix Bit的非MaixPy开发环境。希望本教程能够帮助更多的人享受到riscv裸机开发的乐趣 :)
 
