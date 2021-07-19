@@ -51,17 +51,17 @@ Connection table:
 ## Development Environment
 Host: Windows 10 Build 19042.685  
 Virtual Machine: VMware Workstation 16 Player (VirtualBox has some tricky things on USB)  
-System image: ubuntu-20.04.1-desktop-amd64.iso  (Use desktop version to use mutiple terminals and VS Code easily)
+System image: ubuntu-20.04.1-desktop-amd64.iso  (Use desktop version to use multiple terminals and VS Code easily)
   
 > We did not choose WSL2 here because of [WSL #2195](https://github.com/microsoft/WSL/issues/2195). WSL2 is using Hyper-V, but Hyper-V does not support USB pass-through.  
     Alternative Solutions:  
     1. OpenOCD on Windows, ToolChain on WSL2  
     2. Use [usbip-win](https://github.com/cezanne/usbip-win), OpenOCD use IP access USB device  
-    Just do yourself a favour, use VM :)
+    Just do yourself a favor, use VM :)
 
 ## Prepare Development Environment Steps
 
-Recommend Step for creating a working diretory (optional):  
+Recommend Step for creating a working directory (optional):  
 `mkdir k210 && cd k210`  
 
 ### ToolChain Installation
@@ -88,8 +88,8 @@ Now, SDK Installation has finished, and `hello_world` should be compiled success
 > If `riscv64-unknown-elf-gcc: error trying to exec 'cc1': execvp: No such file or directory` occurs, recheck ToolChain Installation steps to make sure (1) you have `/opt/riscv-toolchain` & (2) you have added ToolChain location to `$PATH`.
 
 ### OpenOCD Debug
-Notice that Maix Bit use CH552 chip to implement USB-Serial without JTAG. (K210 supports JTAG, but the CH552 on Maix Bit has no JTAG function)  
-CH552 contains FT2232c chip, which is the same as the debugger chip and causing conflict if they are used at same time.  
+Notice that Maix Bit uses CH552 chip to implement USB-Serial without JTAG. (K210 supports JTAG, but the CH552 on Maix Bit has no JTAG function) (https://wiki.sipeed.com/soft/maixpy/en/get_started/install_driver/bit.html)  
+CH552 emulates FT2232 chip, which is the same as the debugger chip (FT2232C) and causing conflict if they are used at the same time.  
   
 > ONLY connect the debugger to your VM to avoid conflict!
 
@@ -198,7 +198,7 @@ See https://github.com/ntfreak/openocd/blob/0dd3b7fa6c7930446967772832a351e90c42
     be sure there is `Core [0] ` and `Core [1] `. Also, notice that we will use `port 3333` in GDB for debugging later.  
 
 ### GDB from ToolChain for Debug
-Start a new terminal here and keep old OpenOCD terminal!  
+Start a new terminal here and keep the old OpenOCD terminal!  
   
 1. `cd kendryte-toolchain/bin`
 2. `./riscv64-unknown-elf-gdb ../../kendryte-standalone-sdk-0.5.6/build/hello_world`
@@ -211,7 +211,7 @@ Start a new terminal here and keep old OpenOCD terminal!
     5. `c (continue)`  
     Debug: `s (step)` (step into) `n (next)` (step over)  
 
-    (If `hello_world` is debugging, the program will be stucked in `scanf()` and will not print any thing by `printf()`. To solve this issue, we need to use `UART for Serial Communication`)
+    (If `hello_world` is debugging, the program will be stuck in `scanf()` and will not print anything by `printf()`. To solve this issue, we need to use `UART for Serial Communication`)
 
 4. Any time, `Ctrl+C` will stop current debugging. Then, `q (quit)` in (gdb) can quit gdb.  
 
@@ -235,19 +235,19 @@ Arguments for UART:
 If you are following `OpenOCD Debug` and only connecting debugger to your VM, just go to Step 1.
 > If you are using Maix Bit's ft2232c chip for USB-UART (on your host):  
 Notice that Maix BiT's CH552T chip only use ONE serial interface of K210 to implement USB-Serial.  
-Thus, two serial interfaces will be shown in device management, but only one can be used for UART so you need to try both!  
+Thus, two serial interfaces will be shown in device management, but only one can be used for UART so you need to try both! (https://wiki.sipeed.com/soft/maixpy/en/get_started/upgrade_maixpy_firmware.html)  
   
 1. `sudo apt-get install minicom`
 2. `ls /dev/ttyUSB* -la`  
     remember the device name: (for example) `ttyUSB1`
-    > When the debugger is just connected to VM, there may be two ttyUSBs (like `ttyUSB0` and `ttyUSB1`). If OpenOCD is running, there should be only one ttyUSB avaliable.  
+    > When the debugger is just connected to VM, there may be two ttyUSBs (like `ttyUSB0` and `ttyUSB1`). If OpenOCD is running, there should be only one ttyUSB available.  
 3. `sudo minicom -s -con` (Colorful screen `-con`)
 4. select `Serial port setup`
 5. press `A`, change device to the device in 1. , for example, `/dev/ttyUSB1`  
    press `F`, set to `No`  (Important!)  
    press `Enter`
 6. select `Modem and dialing`  
-    press the correspoding keys and set 9 strings `Init string, Reset string, Dialing prefix #1, Dialing suffix #1, Dialing prefix #2, Dialing suffix #2, Dialing prefix #3, Dialing suffix #3, Hang-up string` to nothing.  
+    press the corresponding keys and set 9 strings `Init string, Reset string, Dialing prefix #1, Dialing suffix #1, Dialing prefix #2, Dialing suffix #2, Dialing prefix #3, Dialing suffix #3, Hang-up string` to nothing.  
     press `Enter`
 7. select `Screen and keyboard`  
     press `B`, set to `DEL`  

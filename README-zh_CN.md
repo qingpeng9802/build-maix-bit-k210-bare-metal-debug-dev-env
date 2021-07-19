@@ -89,8 +89,8 @@ Maix Bit的针脚布局:
 > 如果出现 `riscv64-unknown-elf-gcc: error trying to exec 'cc1': execvp: No such file or directory`， 检查工具链安装步骤，确保 (1) 你有 `/opt/riscv-toolchain` & (2) 你已经将工具链添加到 `$PATH`.
 
 ### OpenOCD 调试
-注意Maix Bit使用CH552芯片来实现USB-串行功能，但没有JTAG功能。（K210支持JTAG，但Maix Bit上的CH552没有JTAG功能）  
-CH552包含和调试器一样的FT2232c芯片，它们同时使用会导致冲突。  
+注意Maix Bit使用CH552芯片来实现USB-串行功能，但没有JTAG功能。（K210支持JTAG，但Maix Bit上的CH552没有JTAG功能）(https://wiki.sipeed.com/soft/maixpy/zh/get_started/install_driver/bit.html)  
+CH552将模拟FT2232芯片，而调试器使用FT2232C，它们同时使用会导致冲突。  
   
 > 只 将调试器连接到虚拟机来避免冲突！
 
@@ -236,7 +236,7 @@ UART 参数:
 如果你正在跟随教程的 `OpenOCD 调试` 且只连接了调试器到虚拟机，跳到 Step 1。
 > 如果你正在使用Maix Bit的ft2232c芯片（在你的宿主机上）来做USB-UART：  
 注意Maix BiT的CH552T芯片只使用了一个K210的串口来实现USB-串口。  
-因此，两个串口都会出现在设备管理中，但只有一个可以用做UART，所以你需要两个都试试！  
+因此，两个串口都会出现在设备管理中，但只有一个可以用做UART，所以你需要两个都试试！(https://wiki.sipeed.com/soft/maixpy/zh/get_started/upgrade_maixpy_firmware.html)  
   
 1. `sudo apt-get install minicom`
 2. `ls /dev/ttyUSB* -la`  
