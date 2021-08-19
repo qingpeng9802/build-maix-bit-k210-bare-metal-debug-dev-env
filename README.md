@@ -77,7 +77,7 @@ About ToolChain: https://metalcode.eu/2019-11-16-gnu-toolchain.html
 
 ### SDK Installation
 
-1. Download [Kendryte SDK Release v0.5.6](https://github.com/kendryte/kendryte-gnu-toolchain/releases/tag/v8.2.0-20190213)
+1. Download [Kendryte SDK Release v0.5.6](https://github.com/kendryte/kendryte-standalone-sdk/releases/tag/V0.5.6)
 2. `tar -xvzf kendryte-standalone-sdk-0.5.6.tar.gz`
 3. `cd kendryte-standalone-sdk-0.5.6`
 4. `mkdir build && cd build`
@@ -300,13 +300,13 @@ This tutorial is written when I only have the experience of using development bo
 Now (2020.12), there are not many resources of RISC-V development board, which means we need some exploration during development, especially for non-MaixPy development environment of Maix Bit. I hope this tutorial can help more people enjoy the fun of RISC-V bare metal development :)
 
 ## Acknowledgement
-[@steward-fu](https://github.com/steward-fu):  
+[@steward-fu (Steward Fu)](https://github.com/steward-fu):  
 https://steward-fu.github.io/website/mcu/k210/openocd.htm  
-[@metalcode-eu](https://github.com/metalcode-eu):  
+[@metalcode-eu (Metalcode)](https://github.com/metalcode-eu):  
 https://metalcode.eu/2019-11-19-k210-debugging.html  
-[@mensi](https://github.com/mensi):  
+[@mensi (Manuel Stocker)](https://github.com/mensi):  
 https://mensi.ch/blog/articles/using-the-sipeed-jtag-debugger-with-a-blue-pill  
 
 ## License  
-Copyright (C) 2020 Qingpeng Li  
+Copyright (C) 2020-2021 Qingpeng Li  
 This work is licensed under a [Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) License](https://creativecommons.org/licenses/by-nc-nd/4.0/).  

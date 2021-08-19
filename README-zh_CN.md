@@ -78,7 +78,7 @@ Maix Bit的针脚布局:
 
 ### SDK 安装
 
-1. 下载 [Kendryte SDK Release v0.5.6](https://github.com/kendryte/kendryte-gnu-toolchain/releases/tag/v8.2.0-20190213)
+1. 下载 [Kendryte SDK Release v0.5.6](https://github.com/kendryte/kendryte-standalone-sdk/releases/tag/V0.5.6)
 2. `tar -xvzf kendryte-standalone-sdk-0.5.6.tar.gz`
 3. `cd kendryte-standalone-sdk-0.5.6`
 4. `mkdir build && cd build`
@@ -301,13 +301,13 @@ https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom
 目前 (2020.12) RISC-V开发板的资源相对缺乏，开发中需要一定的探索，特别是对于Maix Bit的非MaixPy开发环境。希望本教程能够帮助更多的人享受到riscv裸机开发的乐趣 :)
 
 ## 致谢
-[@steward-fu](https://github.com/steward-fu):  
+[@steward-fu (Steward Fu)](https://github.com/steward-fu):  
 https://steward-fu.github.io/website/mcu/k210/openocd.htm  
-[@metalcode-eu](https://github.com/metalcode-eu):  
+[@metalcode-eu (Metalcode)](https://github.com/metalcode-eu):  
 https://metalcode.eu/2019-11-19-k210-debugging.html  
-[@mensi](https://github.com/mensi):  
+[@mensi (Manuel Stocker)](https://github.com/mensi):  
 https://mensi.ch/blog/articles/using-the-sipeed-jtag-debugger-with-a-blue-pill  
 
 ## 许可证  
-版权所有 (C) 2020 Qingpeng Li  
+版权所有 (C) 2020-2021 Qingpeng Li  
 本作品采用 [署名-非商业性使用-禁止演绎 4.0 国际 (CC BY-NC-ND 4.0) 许可证](https://creativecommons.org/licenses/by-nc-nd/4.0/) 进行许可。  
