@@ -57,6 +57,7 @@ System image: ubuntu-20.04.1-desktop-amd64.iso  (Use desktop version to use mult
     Alternative Solutions:  
     1. OpenOCD on Windows, ToolChain on WSL2  
     2. Use [usbip-win](https://github.com/cezanne/usbip-win), OpenOCD use IP access USB device  
+    3. Similar to 2, [usbipd-win](https://github.com/dorssel/usbipd-win) has provided an "official" workaround, see [Connecting USB devices to WSL](https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/)  
     Just do yourself a favor, use VM :)
 
 ## Prepare Development Environment Steps
