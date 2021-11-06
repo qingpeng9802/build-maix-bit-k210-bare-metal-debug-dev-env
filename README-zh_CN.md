@@ -58,6 +58,7 @@ Maix Bit的针脚布局:
     替代方案：  
     1. OpenOCD on Windows, 工具链 on WSL2  
     2. 用 [usbip-win](https://github.com/cezanne/usbip-win), OpenOCD 使用ip来访问USB设备  
+    3. 类似2, [usbipd-win](https://github.com/dorssel/usbipd-win) 提供了一种“官方”变通方法, 见 [Connecting USB devices to WSL](https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/)  
     我建议使用虚拟机来获得一致的开发体验。  
 
 ## 开发环境准备步骤
